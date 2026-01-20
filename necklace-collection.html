@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Petch Chompoo Jewelry - เครื่องประดับไทยพรีเมียม</title>
+    
+    <!-- Google Fonts for Thai support -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- =========================
+         Embedded CSS (Thai Luxury Style)
+    ========================== -->
+    <style>
+        :root {
+            --gold: #d4af37;
+            --rose-gold: #e5c0a5;
+            --soft-pink: #fef5f1;
+            --beige: #f9f7f4;
+            --white: #ffffff;
+            --text-dark: #2c2c2c;
+            --text-gray: #6b6b6b;
+            --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.06);
+            --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: var(--beige);
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        /* =========================
+           Hero Section
+        ========================== */
+        .hero {
+            background: linear-gradient(
+                135deg,
+                rgba(254, 245, 241, 0.95),
+                rgba(249, 247, 244, 0.95)
+            ),
+            url("https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=1200");
+            background-size: cover;
+            background-position: center;
+            padding: 120px 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .brand-logo {
+            font-size: 3.5rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--gold), var(--rose-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .slogan {
+            font-size: 1.3rem;
+            color: var(--text-gray);
+            font-weight: 300;
+            margin-top: 10px;
+        }
+
+        /* =========================
+           Collection Section
+        ========================== */
+        .section {
+            max-width: 1300px;
+            margin: 90px auto;
+            padding: 0 30px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 60px;
+            color: var(--gold);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin: 20px auto 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+        }
+
+        /* =========================
+           Product Card (Premium Style)
+        ========================== */
+        .card {
+            background-color: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow-soft);
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--gold);
+        }
+
+        .card-image {
+            position: relative;
+            overflow: hidden;
+            background: var(--soft-pink);
+        }
+
+        .card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.08);
+        }
+
+        .card-content {
+            padding: 30px 25px;
+            text-align: center;
+        }
+
+        .product-name {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+
+        .product-description {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            margin-bottom: 18px;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .price {
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 35px;
+            border-radius: 50px;
+            background: linear-gradient(135deg, var(--gold), var(--rose-gold));
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        /* =========================
+           Footer
+        ========================== */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            background-color: var(--soft-pink);
+            margin-top: 80px;
+        }
+
+        /* =========================
+           Responsive Design
+        ========================== */
+        @media (max-width: 768px) {
+            .brand-logo {
+                font-size: 2.5rem;
+            }
+
+            .slogan {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .hero {
+                padding: 80px 20px;
+            }
+
+            .grid {
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .brand-logo {
+                font-size: 2rem;
+            }
+
+            .card img {
+                height: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- =========================
+         Hero Section
+    ========================== -->
+    <section class="hero">
+        <h1 class="brand-logo">Petch Chompoo Jewelry</h1>
+        <p class="slogan">เสริมเสน่ห์ในทุกช่วงเวลาพิเศษของคุณ</p>
+    </section>
+
+    <!-- =========================
+         Necklace Collection Section
+    ========================== -->
+    <section class="section">
+        <h2 class="section-title">คอลเลคชั่นสร้อยคอพรีเมียม</h2>
+
+        <div class="grid">
+            <!-- Product 1 -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://cdn.shopify.com/s/files/1/0535/3327/8362/files/IMG_9196_480x480.jpg?v=1646732622" alt="สร้อยคอทองคำ">
+                </div>
+                <div class="card-content">
+                    <h3 class="product-name">สร้อยคอทองคำออร่า</h3>
+                    <p class="product-description">ความเรียบง่ายที่หรูหรา เหนือกาลเวลา</p>
+                    <div class="price">฿4,290</div>
+                    <a href="#" class="btn">สั่งซื้อสินค้า</a>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://cdn.store-assets.com/s/1333308/i/72965072.jpeg?width=1024" alt="สร้อยคอไข่มุก">
+                </div>
+                <div class="card-content">
+                    <h3 class="product-name">สร้อยคอไข่มุกแห่งดวงดาว</h3>
+                    <p class="product-description">ความนุ่มนวลราวแสงดาว สง่างามทุกมุมมอง</p>
+                    <div class="price">฿4,990</div>
+                    <a href="#" class="btn">สั่งซื้อสินค้า</a>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://inwfile.com/s-fr/6pfnxy.jpg" alt="สร้อยคอจี้หัวใจ">
+                </div>
+                <div class="card-content">
+                    <h3 class="product-name">สร้อยคอจี้หัวใจคลาสสิก</h3>
+                    <p class="product-description">ดีไซน์แห่งความรัก สำหรับช่วงเวลาพิเศษ</p>
+                    <div class="price">฿3,290</div>
+                    <a href="#" class="btn">สั่งซื้อสินค้า</a>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://www.petchchompoo.com/assets/product/1ea2bc9d-752e-43a9-99b1-4ecbbb090238/line-album-332025-250311-4-67ef4de5620e3808249453.jpg" alt="สร้อยคอห้อย">
+                </div>
+                <div class="card-content">
+                    <h3 class="product-name">สร้อยคอห้อยสไตล์หรูหรา</h3>
+                    <p class="product-description">ความงดงามที่ไหลลื่น เรียบหรูทุกองศา</p>
+                    <div class="price">฿4,690</div>
+                    <a href="#" class="btn">สั่งซื้อสินค้า</a>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://acemijewelry.com/cdn/shop/products/a31ff053375ff967586a54c33de2eb99_900x.jpg?v=1653555633" alt="สร้อยคอทองคำโมเดิร์น">
+                </div>
+                <div class="card-content">
+                    <h3 class="product-name">สร้อยคอทองคำโมเดิร์น</h3>
+                    <p class="product-description">โดดเด่นแต่หรูหรา เหมาะกับทุกวัน</p>
+                    <div class="price">฿5,690</div>
+                    <a href="#" class="btn">สั่งซื้อสินค้า</a>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://down-th.img.susercontent.com/file/461eef4aa318bda2043577ffd76c8f08" alt="สร้อยคอระยิบระยับ">
+                </div>
+                <div class="card-content">
+                    <h3 class="product-name">สร้อยคอประกายเพชร</h3>
+                    <p class="product-description">แสงระยิบระยับ ดีเทลละเอียดอ่อน</p>
+                    <div class="price">฿2,990</div>
+                    <a href="#" class="btn">สั่งซื้อสินค้า</a>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://ae01.alicdn.com/kf/S96223cba93d74d20885eb50638f2c56cO.jpg" alt="สร้อยคอหลายชั้น">
+                </div>
+                <div class="card-content">
+                    <h3 class="product-name">สร้อยคอหลายชั้นลักชูรี่</h3>
+                    <p class="product-description">ชั้นซ้อนแห่งความหรูหรา สไตล์ร่วมสมัย</p>
+                    <div class="price">฿5,390</div>
+                    <a href="#" class="btn">สั่งซื้อสินค้า</a>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://sc04.alicdn.com/kf/H601a032200e1420082ec34df86403cfaI.jpeg_350x350.jpeg" alt="สร้อยคอไข่มุกคลาสสิก">
+                </div>
+                <div class="card-content">
+                    <h3 class="product-name">สร้อยคอไข่มุกคลาสสิก</h3>
+                    <p class="product-description">ความเก๋ไก๋ที่ไม่มีวันเลือนหาย</p>
+                    <div class="price">฿6,090</div>
+                    <a href="#" class="btn">สั่งซื้อสินค้า</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         Footer
+    ========================== -->
+    <footer>
+        © 2026 Petch Chompoo Jewelry. สงวนลิขสิทธิ์
+    </footer>
+
+    <!-- =========================
+         Embedded JavaScript
+    ========================== -->
+    <script>
+        // Handle Buy Now button clicks (UI demo only)
+        document.querySelectorAll(".btn").forEach(button => {
+            button.addEventListener("click", (e) => {
+                e.preventDefault();
+                alert("นี่คือหน้าตัวอย่างเท่านั้น ระบบการสั่งซื้อยังไม่เปิดใช้งาน");
+            });
+        });
+
+        // Smooth scroll animation on page load
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.5s ease';
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
